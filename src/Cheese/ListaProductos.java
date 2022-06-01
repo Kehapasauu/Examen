@@ -42,6 +42,11 @@ public class ListaProductos {
     
         if (campo.replace(" ","") == "")  return true; else return false;
     }
+    /**
+     * 
+     * @param prod Introducimos el producto 
+     * @return Nos devuelve el nombre del producto
+     */
 
     public Producto addProducto(Producto prod) {
         
@@ -54,6 +59,11 @@ public class ListaProductos {
         listaP.put(prod.getcode(), prod);
         return prod;
     }
+    /**
+     * 
+     * @param codigo Introducimos el String del codigo que queremos eliminar
+     * @return eL producto eliminado
+     */
 
     public Producto eliminarProducto(String codigo) { 
         
@@ -65,6 +75,12 @@ public class ListaProductos {
         }
         return prod;
     }
+    /**
+     * 
+     * @param codigo Introducimos el String del codigo que queremos buscar
+     * @return Si enceuntra el codigo nos devuelve el producto, si no, nos 
+     * devuelve el codigo.
+     */
 
     public Producto buscarProducto(String codigo) { 
         Producto prod = null;
@@ -76,6 +92,10 @@ public class ListaProductos {
             return listaP.get(codigo);
         }
     }
+    /**
+     * 
+     * @return Te devuelve la lista de productos
+     */
 
     public ArrayList<Producto> getProductos() {
         ArrayList<Producto> prodsList = new ArrayList<>();
@@ -83,6 +103,10 @@ public class ListaProductos {
         return prodsList;
     }
     
+    /**
+     * 
+     * @return El numero de productos
+     */
     public int totalProductos(){
             return this.getN();
     }
